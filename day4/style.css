@@ -1,0 +1,85 @@
+/* 1. Define default colours as variables */
+:root {
+  --bg-color: #f4f6f8;
+  --text-color: #222222;
+  --card-bg: #ffffff;
+  --border-color: #cccccc;
+  --warning-color: orange;
+  --over-color: red;
+  --btn-bg: #0ba184;
+  --btn-hover: #088a70;
+}
+
+/* 2. Dark theme overrides */
+body.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #f4f6f8;
+  --card-bg: #2d2d2d;
+  --border-color: #555555;
+}
+
+/* 3. Base styles using the variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+main {
+  background-color: var(--card-bg);
+  padding: 24px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+/* 4. Counter warning classes */
+.warning {
+  color: var(--warning-color);
+}
+
+.over {
+  color: var(--over-color);
+  font-weight: bold;
+}
+
+/* 5. Buttons */
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: var(--btn-bg);
+  color: white;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--btn-hover);
+}
